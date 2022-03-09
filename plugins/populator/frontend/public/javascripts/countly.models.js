@@ -985,11 +985,12 @@
 
         $.ajax({
             type: "POST",
-            url: countlyCommon.API_URL + "/i/pushes/create",
+            url: window.countlyCommon.API_URL + '/i/push/message/create?app_id=' + countlyCommon.ACTIVE_APP_ID,
             data: {
                 args: JSON.stringify(data),
                 populator: true
             },
+            contentType: "application/json",
             success: function(json) {
                 data._id = json._id;
                 if (callback) {
