@@ -293,9 +293,9 @@
                 }
             },
             handleUploadSuccess: function() {
+                this.showFileList = true;
                 this.app_icon["background-image"] = 'url("appimages/' + this.selectedApp + '.png?' + Date.now() + '")';
                 countlyGlobal.apps[this.selectedApp].image = "appimages/" + this.selectedApp + '.png?' + Date.now();
-                this.showFileList = true;
             },
             loadComponents: function() {
                 var cc = countlyVue.container.dataMixin({
