@@ -222,6 +222,7 @@
             formatter: formatter,
             globalRange: globalRange,
             tableType: tableType,
+            globalMonthsRange: globalMonthsRange,
             globalMin: instance.isFuture ? globalFutureMin : globalMin,
             globalMax: instance.isFuture ? globalFutureMax : globalMax
         };
@@ -479,6 +480,7 @@
                         }
                     }
                     if (newVal.level === "months") {
+                        this.globalRange = this.globalMonthsRange;
                         this.tableType = "month";
                     }
                     else if (newVal.level === "weeks") {
